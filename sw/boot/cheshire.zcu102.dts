@@ -1,0 +1,12 @@
+
+/include/ "cheshire.dtsi"
+
+&spi {
+  boot-with = <1>;
+  nor@1 {
+    compatible = "m25p80", "jedec,spi-nor";
+    reg = <0x1>; // CS
+    spi-max-frequency = <0x66ff300>;
+    disable-wp;
+  };
+};
